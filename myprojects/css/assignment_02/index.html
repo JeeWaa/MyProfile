@@ -72,17 +72,21 @@
             top: 10px;
             left: 260px;
         }
-        section > p{
+        main > section > p{
             margin-left: 260px;
         }
 
         footer{
+            position: relative;
             background-color: palevioletred;
             height: 50px;
-            width: 100%;
-            padding-left: 50%;
-            padding-right: 50%;
+        }
+        footer > section > bt{
             position: absolute;
+            color: white;
+            margin-left: 50%;
+            margin-right: 50%;
+            margin-top: 10px;
         }
     </style>
 
@@ -188,7 +192,9 @@
 <!---------------- Footer ---------------->
 
 <footer>
-    <p>Developed By Jeewa</p>
+    <section>
+        <bt>Developed By Jeewa</bt>
+    </section>
 </footer>
 
 </body>
