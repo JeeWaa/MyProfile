@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS</title>
+    <link rel="stylesheet" href="assets/resource/normalize.css">
 
-    <style></style>
+    <style>
+        section{
+            position: relative;
+        }
+        section > header{
+            height: 50px;
+            width: 100%;
+            background-color: red;
+        }
+        section > main{
+            height: 100%;
+            width: 100%;
+            background-color: greenyellow;
+        }
+        header > p{
+            color: white;
+        }
+        main > p{
+            padding-top: 400px;
+            text-align: center;
+        }
 
+        body > section:nth-child(1){
+            top: 0;
+        }
+        body > section:nth-child(2){
+            top: 100%;
+        }
+        section:nth-child(3){
+            top: 200%;
+        }
+        section:nth-child(4){
+            top: 300%;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,10 +47,10 @@
 
 <section>
     <header>
-        <p></p>
+        <p>Card 1</p>
     </header>
     <main>
-        <p></p>
+        <p>Hello</p>
     </main>
 </section>
 
@@ -24,10 +58,10 @@
 
 <section>
     <header>
-        <p></p>
+        <p>Card 2</p>
     </header>
     <main>
-        <p></p>
+        <p>How</p>
     </main>
 </section>
 
@@ -35,16 +69,23 @@
 
 <section>
     <header>
-        <p></p>
+        <p>Card 3</p>
     </header>
     <main>
-        <p></p>
+        <p>Are</p>
     </main>
 </section>
 
 <!---------------- Card 4 ---------------->
 
-<section></section>
+<section>
+    <header>
+        <p>Card 4</p>
+    </header>
+    <main>
+        <p>You..?</p>
+    </main>
+</section>
 
 </body>
 </html>
