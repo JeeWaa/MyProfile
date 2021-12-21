@@ -32,6 +32,21 @@
             margin: auto;
             z-index: 2;
         }
+
+        section > section{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        section > section:nth-child(1){
+            top: 0;
+        }
+        section > section:nth-child(2){
+            top: 100%;
+        }
+        section > section:nth-child(3){
+            top: 200%;
+        }
     </style>
 </head>
 <body>
