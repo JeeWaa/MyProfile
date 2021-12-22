@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-
-<header>
+<head>
+    <meta charset="UTF-8">
     <title>My Profile</title>
+    <link rel="stylesheet" href="assets/resource/normalize.css">
 
-<!------CSS------>
+    <!------CSS------>
 
     <style>
-        * {
-            color: aqua;
-        }
 
-        h1 {
-            color: red;
-        }
+        /*header*/
 
-        #title {
-            color: green;
+        header{
+            height: 50px;
+            background-color: #7e7e82;
+            position: relative;
         }
-
-        .header {
-            color: blue!important;
+        header > section > img{
+            height: 40px;
+            padding-left: 10px;
+            position: absolute;
         }
-
-        [id] {
-            color: orange;
+        header > section > nav > ul{
+            font-size: 20px;
+            right: 0;
+            padding-right: 20px;
+            list-style: none;
+            display: inline-block;
+            position: absolute;
         }
-
-        :first-child {
-            color: deeppink;
+        header > section > nav > ul > li{
+            padding-left: 20px;
+            padding-right: 20px;
+            display: inline-block;
         }
     </style>
 
-<!------CSS------>
+    <!------CSS------>
+
+</head>
+<body>
 
 <!----------------Home page---------------->
 
+<header>
     <section>
-        <img src="" alt="logo" height="50">
+        <img src="assets/icon/logo.png" alt="logo">
     </section>
     <section>
         <nav>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <ul>
+                <li>About</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
         </nav>
     </section>
 </header>
 
 <main>
     <section>
-        <img src="assets/image/profile.png" alt="profile picture" height="500">
+        <img src="" alt="profile picture">
     </section>
     <section>
         <h2>
@@ -67,16 +76,16 @@
 
 <footer>
     <address>
-        <img src="" alt="facebook logo" height="20">
+        <img src="" alt="facebook logo">
     </address>
     <address>
-        <img src="" alt="twitter logo" height="20">
+        <img src="" alt="twitter logo">
     </address>
     <address>
-        <img src="" alt="github logo" height="20">
+        <img src="" alt="github logo">
     </address>
     <address>
-        <img src="" alt="linkedin logo" height="20">
+        <img src="" alt="linkedin logo">
     </address>
 </footer>
 
@@ -121,7 +130,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="electronic logo" height="25">
+                <img src="" alt="electronic logo">
                 <figcaption>Electronic</figcaption>
                 <p>Electronic item design and <br>robotics</p>
             </figure>
@@ -130,7 +139,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="arduino logo" height="25">
+                <img src="" alt="arduino logo">
                 <figcaption>Arduino</figcaption>
                 <p>Arduino programming</p>
             </figure>
@@ -142,7 +151,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="photoshop logo" height="25">
+                <img src="" alt="photoshop logo">
                 <figcaption>Photoshop</figcaption>
                 <p>Logo, flyer, cover, brochure and <br>photo editing</p>
             </figure>
@@ -151,7 +160,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="illustrator logo" height="25">
+                <img src="" alt="illustrator logo">
                 <figcaption>Illustrator</figcaption>
                 <p>Logo, flyer, cover, brochure and <br>photo editing</p>
             </figure>
@@ -160,7 +169,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="anime logo" height="25">
+                <img src="" alt="anime logo">
                 <figcaption>Anime</figcaption>
                 <p>2D animation video</p>
             </figure>
@@ -169,7 +178,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="premiere logo" height="25">
+                <img src="" alt="premiere logo">
                 <figcaption>Premiere</figcaption>
                 <p>Video editing</p>
             </figure>
@@ -181,7 +190,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="java logo" height="25">
+                <img src="" alt="java logo">
                 <figcaption>Java</figcaption>
                 <p>Java programming</p>
             </figure>
@@ -190,7 +199,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="mysql logo" height="25">
+                <img src="" alt="mysql logo">
                 <figcaption>My SQL</figcaption>
                 <p>My SQL</p>
             </figure>
@@ -202,7 +211,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="figma logo" height="25">
+                <img src="" alt="figma logo">
                 <figcaption>Figma</figcaption>
                 <p>Web UI design</p>
             </figure>
@@ -214,7 +223,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="html logo" height="25">
+                <img src="" alt="html logo">
                 <figcaption>HTML</figcaption>
                 <p>Web designing</p>
             </figure>
@@ -223,7 +232,7 @@
     <section>
         <section>
             <figure>
-                <img src="" alt="css logo" height="25">
+                <img src="" alt="css logo">
                 <figcaption>CSS</figcaption>
                 <p>Web designing</p>
             </figure>
@@ -242,7 +251,7 @@
 </section>
 <section>
     <div>
-        <img src="" alt="electronic image" height="400">
+        <img src="" alt="electronic image">
         <dd>electronic</dd>
     </div>
     <aside>
@@ -252,7 +261,7 @@
 </section>
 <section>
     <div>
-        <img src="" alt="designing image" height="400">
+        <img src="" alt="designing image">
         <dd>designing</dd>
     </div>
     <aside>
@@ -262,7 +271,7 @@
 </section>
 <section>
     <div>
-        <img src="" alt="programming image" height="400">
+        <img src="" alt="programming image">
         <dd>programming</dd>
     </div>
     <aside>
@@ -272,7 +281,7 @@
 </section>
 <section>
     <div>
-        <img src="" alt="uiux image" height="400">
+        <img src="" alt="uiux image">
         <dd>uiux</dd>
     </div>
     <aside>
@@ -289,19 +298,19 @@
 <section>
     <section>
         <div>
-            <img src="" alt="experience image" height="200">
+            <img src="" alt="experience image">
             <p>Experience</p>
         </div>
     </section>
     <section>
         <div>
-            <img src="" alt="education image" height="200">
+            <img src="" alt="education image">
             <p>Education</p>
         </div>
     </section>
     <section>
         <div>
-            <img src="" alt="events image" height="200">
+            <img src="" alt="events image">
             <p>Events</p>
         </div>
     </section>
@@ -311,16 +320,16 @@
 
 <footer>
     <address>
-        <img src="" alt="facebook logo" height="20">
+        <img src="" alt="facebook logo">
     </address>
     <address>
-        <img src="" alt="twitter logo" height="20">
+        <img src="" alt="twitter logo">
     </address>
     <address>
-        <img src="" alt="github logo" height="20">
+        <img src="" alt="github logo">
     </address>
     <address>
-        <img src="" alt="linkedin logo" height="20">
+        <img src="" alt="linkedin logo">
     </address>
 </footer>
 <section></section>
