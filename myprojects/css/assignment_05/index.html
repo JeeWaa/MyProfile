@@ -280,7 +280,46 @@
         }
 
         @media all and (min-width: 768px) and (max-width: 1024px){
+            header{
+                height: 70px;
+            }
+            header > img{
+                height: 40px;
+            }
+            header > ul{
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+                margin: auto;
+                font-size: 18px;
+                padding-right: 20px;
+                padding-bottom: 18px;
+            }
+            header > ul > li{
+                padding: 0 20px 0 20px;
+            }
 
+            nav{
+                width: 150px;
+            }
+            nav > ul > li{
+                font-size: 18px;
+            }
+
+            section > img{
+                height: 200px;
+                border: 8px solid white;
+            }
+
+            main > section > section:nth-child(1){
+                margin-left: 160px;
+                height: 200px;
+            }
+
+            main > section > section:nth-child(2){
+                margin-left: 160px;
+                margin-top: 0;
+            }
         }
 
         @media all and (min-width: 1024px) and (max-width: 1440px){
