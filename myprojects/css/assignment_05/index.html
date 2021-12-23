@@ -239,7 +239,33 @@
         }
 
         @media all and (min-width: 425px) and (max-width: 768px){
+            header{
+                height: 70px;
+            }
+            header > img{
+                height: 40px;
+            }
+            header > ul{
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+                margin: auto;
+                font-size: 18px;
+                padding-left: 10px;
+                padding-bottom: 18px;
+            }
+            header > ul > li{
+                padding: 0 10px 0 10px;
+            }
 
+            main > section > section:nth-child(1){
+                margin-left: 0;
+                flex-direction: column;
+            }
+
+            main > section > section:nth-child(2){
+                margin-left: 0;
+            }
         }
 
         @media all and (min-width: 768px) and (max-width: 1024px){
