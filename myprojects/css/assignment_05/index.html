@@ -80,6 +80,7 @@
 
         main > section > section > img{
             flex-grow: 1;
+            flex-shrink: 1;
         }
 
         section > img:nth-child(1){
@@ -221,6 +222,7 @@
             }
 
             section > img{
+                height: 400px;
                 border: 4px solid white;
             }
 
@@ -231,7 +233,7 @@
 
             main > section > section:nth-child(2){
                 margin-left: 0;
-                margin-top: 195vw;
+                margin-top: 800px;
                 border-left: 4px solid white;
                 border-right: 4px solid white;
             }
@@ -307,8 +309,7 @@
             }
 
             section > img{
-                height: 200px;
-                border: 8px solid white;
+                border-right: 8px solid white;
             }
 
             main > section > section:nth-child(1){
@@ -323,7 +324,45 @@
         }
 
         @media all and (min-width: 1024px) and (max-width: 1440px){
+            header{
+                height: 70px;
+            }
+            header > img{
+                height: 40px;
+            }
+            header > ul{
+                position: absolute;
+                right: 0;
+                bottom: 5px;
+                margin: auto;
+                font-size: 20px;
+                padding-right: 20px;
+                padding-bottom: 18px;
+            }
+            header > ul > li{
+                padding: 0 20px 0 20px;
+            }
 
+            nav{
+                width: 200px;
+            }
+            nav > ul > li{
+                font-size: 20px;
+            }
+
+            section > img{
+                border-right: 8px solid white;
+            }
+
+            main > section > section:nth-child(1){
+                margin-left: 210px;
+                height: 250px;
+            }
+
+            main > section > section:nth-child(2){
+                margin-left: 210px;
+                margin-top: 0;
+            }
         }
     </style>
 
