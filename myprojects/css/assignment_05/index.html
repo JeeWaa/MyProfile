@@ -63,36 +63,35 @@
             color: #55d023;
         }
 
-        main > section > section{
+        main > section > section:nth-child(1){
+            height: 300px;
             position: relative;
             margin-left: 280px;
+            padding-top: 15px;
+            display: flex;
+        }
+
+        main > section > section:nth-child(2){
+            position: relative;
+            margin-left: 280px;
+            padding-top: 30px;
+            padding-bottom: 10px;
         }
 
         main > section > section > img{
-            height: 350px;
-            position: absolute;
-            width: calc(100% / 3);
-            background-size: cover;
+            flex-grow: 1;
         }
 
         section > img:nth-child(1){
-            left: 0;
+            background-size: cover;
         }
         section > img:nth-child(2){
-            left: calc(100% / 3);
+            background-size: cover;
             border-left: 4px solid white;
         }
         section > img:nth-child(3){
-            right: 0;
+            background-size: cover;
             border-left: 4px solid white;
-        }
-
-        main > section > section:nth-child(1){
-            padding-top: 15px;
-        }
-        main > section > section:nth-child(2){
-            padding-top: 350px;
-            padding-bottom: 10px;
         }
 
         footer{
@@ -111,7 +110,7 @@
 
         @media all and (max-width: 320px){
             header{
-                height: 120px;
+                height: 150px;
             }
             header > img{
                 position: absolute;
@@ -130,8 +129,17 @@
                 display: none;
             }
 
-            main > section > section{
+            main > section > section:nth-child(1){
                 margin-left: 0;
+                flex-direction: column;
+            }
+
+            main > section > section:nth-child(2){
+                margin-left: 0;
+                margin-top: 600px;
+            }
+            section > img{
+                border: 4px solid white;
             }
         }
 
