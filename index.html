@@ -29,7 +29,6 @@
             right: 0;
             padding-right: 20px;
             list-style: none;
-            display: inline-block;
             position: absolute;
         }
         header > section > nav > ul > li{
@@ -42,9 +41,9 @@
         /*main*/
 
         main:nth-child(2){
+            position: relative;
             height: 770px;
             background-color: #c9c5c5;
-            position: relative;
         }
         main:nth-child(2) > section > img{
             height: 750px;
@@ -71,6 +70,26 @@
             top: 400px;
             height: max-content;
             width: max-content;
+        }
+
+        /*footer*/
+
+        main > footer{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            bottom: 0;
+            height: 80px;
+            width: 600px;
+            border-top-right-radius: 80px;
+            background-color: #443232;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        main > footer > address{
+            height: 60px;
+            width: 60px;
         }
 
     </style>
@@ -111,22 +130,21 @@
             Jeewantha Fernando
         </h1>
     </section>
+    <footer>
+        <address>
+            <img src="" alt="facebook logo">
+        </address>
+        <address>
+            <img src="" alt="twitter logo">
+        </address>
+        <address>
+            <img src="" alt="github logo">
+        </address>
+        <address>
+            <img src="" alt="linkedin logo">
+        </address>
+    </footer>
 </main>
-
-<footer>
-    <address>
-        <img src="" alt="facebook logo">
-    </address>
-    <address>
-        <img src="" alt="twitter logo">
-    </address>
-    <address>
-        <img src="" alt="github logo">
-    </address>
-    <address>
-        <img src="" alt="linkedin logo">
-    </address>
-</footer>
 
 <!----------------About Page---------------->
 
