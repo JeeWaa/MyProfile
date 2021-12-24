@@ -9,6 +9,8 @@
 
     <style>
 
+        /*     home page     */
+
         /*header*/
 
         header{
@@ -35,6 +37,40 @@
             padding-right: 20px;
             color: white;
             display: inline-block;
+        }
+
+        /*main*/
+
+        main:nth-child(2){
+            height: 770px;
+            background-color: #c9c5c5;
+            position: relative;
+        }
+        main:nth-child(2) > section > img{
+            height: 750px;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            bottom: 0;
+        }
+        main > section h2{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: max-content;
+            width: max-content;
+        }
+        main > section h1{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 400px;
+            height: max-content;
+            width: max-content;
         }
 
     </style>
@@ -71,7 +107,7 @@
         <h2>
             Hey, I'm
         </h2>
-        <h1 class="header" id="title" style="color: brown">
+        <h1>
             Jeewantha Fernando
         </h1>
     </section>
