@@ -5,7 +5,51 @@
     <title>CSS</title>
     <link rel="stylesheet" href="assets/resource/normalize.css">
 
-    <style></style>
+    <style>
+        section{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 400px;
+            width: 400px;
+            border-radius: 100%;
+            background-color: cadetblue;
+        }
+        section > h1{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: max-content;
+            width: max-content;
+            font-size: 40px;
+            color: white;
+        }
+
+        section::after{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            content: " ";
+            border: 20px solid gray;
+            border-top: 20px solid red;
+            border-radius: 100%;
+        }
+
+        section:hover::after{
+            transform: rotate(360deg);
+            transition: all 4s;
+            cursor: pointer;
+        }
+    </style>
 
 </head>
 <body>
