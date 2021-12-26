@@ -6,25 +6,69 @@
     <link rel="stylesheet" href="assets/resource/normalize.css">
     <link rel="stylesheet" href="assets/css/fonts/css/all.css">
 
-    <style></style>
+    <style>
+        section{
+            position: relative;
+            height: 50px;
+            width: 250px;
+            left: -195px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background-color: blue;
+
+            transition-property: left;
+            transition-duration: 2s;
+        }
+        section > h1{
+            position: absolute;
+            margin: auto;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            font-size: 20px;
+            color: white;
+            height: max-content;
+            width: max-content;
+        }
+        section > i{
+            position: absolute;
+            margin: auto;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            height: max-content;
+            font-size: 30px;
+            color: white;
+        }
+        section:hover{
+            left: 0;
+            transition-property: left;
+            transition-duration: 2s;
+        }
+    </style>
 
 </head>
 <body>
 
 <section>
     <h1>Menu One</h1>
+    <i class="fas fa-address-book"></i>
 </section>
 <section>
     <h1>Menu Two</h1>
+    <i class="fas fa-ambulance"></i>
 </section>
 <section>
     <h1>Menu Three</h1>
+    <i class="fas fa-atlas"></i>
 </section>
 <section>
     <h1>Menu Four</h1>
+    <i class="fab fa-buffer"></i>
 </section>
 <section>
     <h1>Menu Five</h1>
+    <i class="fas fa-cart-arrow-down"></i>
 </section>
 
 </body>
