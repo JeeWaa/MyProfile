@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <title>CSS</title>
 
-    <style></style>
+    <style>
+        section {
+            position: absolute;
+            margin: auto;
+            width: 300px;
+            height: 100px;
+            border-radius: 20px;
+            animation-name: anime;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        @keyframes anime {
+            0% {
+                left: 0;
+                top: 0;
+                transform: rotate(0);
+                background-color: #1a1ac6;
+            }
+            25% {
+                left: 700px;
+                top: 0;
+                transform: rotate(180deg);
+                background-color: #51fd4c;
+            }
+            50% {
+                left: 700px;
+                top: 700px;
+                transform: rotate(360deg);
+                background-color: #ff1515;
+            }
+            75% {
+                left: 0;
+                top: 700px;
+                transform: rotate(180deg);
+                background-color: #656565;
+            }
+            100% {
+                left: 0;
+                top: 0;
+                transform: rotate(0);
+                background-color: #ea6600;
+            }
+        }
+    </style>
 
 </head>
 <body>
