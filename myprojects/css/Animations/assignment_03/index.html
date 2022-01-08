@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <title>CSS</title>
 
-    <style></style>
+    <style>
+        main {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 800px;
+            width: 1300px;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+        main > section {
+            width: 5200px;
+            height: 800px;
+
+            display: flex;
+
+            animation-name: anime;
+            animation-duration: 16s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        main > section > div {
+            width: 1300px;
+        }
+        main > section > div:nth-child(1) {
+            background-image: url("assets/image/01.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        main > section > div:nth-child(2) {
+            background-image: url("assets/image/02.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        main > section > div:nth-child(3) {
+            background-image: url("assets/image/03.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        main > section > div:nth-child(4) {
+            background-image: url("assets/image/04.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes anime {
+            0%, 10% {
+                transform: translateX(0);
+            }
+            30%, 40% {
+                transform: translateX(-25%);
+            }
+            60%, 70% {
+                transform: translateX(-50%);
+            }
+            90%, 100% {
+                transform: translateX(-75%);
+            }
+        }
+    </style>
 
 </head>
 <body>
 
-<main></main>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
 
 </body>
 </html>
