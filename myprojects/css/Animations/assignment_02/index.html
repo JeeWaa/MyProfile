@@ -4,7 +4,39 @@
     <meta charset="UTF-8">
     <title>CSS</title>
 
-    <style></style>
+    <style>
+        section {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 400px;
+            height: 400px;
+            border: 10px solid #4531ad;
+            border-radius: 100%;
+            animation-name: anime;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes anime {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            50% {
+                opacity: 100%;
+            }
+            100% {
+                width: 400px;
+                height: 400px;
+                opacity: 0;
+            }
+        }
+    </style>
 
 </head>
 <body>
