@@ -4,7 +4,137 @@
     <meta charset="UTF-8">
     <title>CSS</title>
 
-    <style></style>
+    <style>
+        main {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 600px;
+            width: 1000px;
+            border: 4px solid red;
+            overflow: hidden;
+        }
+
+        /*city*/
+
+        main > section:nth-child(1) {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            bottom: 0;
+
+            animation-name: cityAndRoad;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        main > section:nth-child(1) > section:nth-child(1) {
+            height: 240px;
+            width: 4000px;
+            display: flex;
+        }
+        main > section:nth-child(1) > section:nth-child(1) > div {
+            width: 100%;
+        }
+        main > section:nth-child(1) > section:nth-child(1) > div {
+            background-image: url("assets/image/city.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /*road*/
+
+        main > section:nth-child(1) > section:nth-child(2) {
+            height: 240px;
+            width: 4000px;
+            display: flex;
+        }
+        main > section:nth-child(1) > section:nth-child(2) > div {
+            width: 100%;
+        }
+        main > section:nth-child(1) > section:nth-child(2) > div {
+            background-image: url("assets/image/road.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /*sky*/
+
+        main > section:nth-child(2) > div:nth-child(1) {
+            background-image: url("assets/image/sky.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+        }
+
+        /*car*/
+
+        main > section:nth-child(2) > div:nth-child(2) {
+            background-image: url("assets/image/car.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 170px;
+            bottom: 0;
+            width: 500px;
+            height: 200px;
+        }
+
+        /*wheel*/
+
+        main > section:nth-child(2) > div:nth-child(3) {
+            background-image: url("assets/image/wheel.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            margin: auto;
+            left: 294px;
+            top: 390px;
+            width: 90px;
+            height: 90px;
+
+            animation-name: wheel;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        main > section:nth-child(2) > div:nth-child(4) {
+            background-image: url("assets/image/wheel.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            margin: auto;
+            left: 600px;
+            top: 390px;
+            width: 90px;
+            height: 90px;
+
+            animation-name: wheel;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes cityAndRoad {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-75%);
+            }
+        }
+        @keyframes wheel {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(720deg);
+            }
+        }
+    </style>
 
 </head>
 <body>
