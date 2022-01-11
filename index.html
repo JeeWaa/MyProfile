@@ -61,7 +61,18 @@
             height: 40px;
             border: 3px solid #ffffff;
             border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0);
         }
+        header > section > nav > ul > li:nth-child(1):hover::after{
+            background-color: rgba(255, 255, 255, 0.08);
+            top: -12px;
+            left: 14px;
+            width: 158px;
+            height: 48px;
+            transition: all 0.01s;
+            cursor: pointer;
+        }
+
         header > section > nav > ul > li:nth-child(2)::after{
             content: " ";
             position: absolute;
@@ -72,7 +83,18 @@
             height: 40px;
             border: 3px solid #ffffff;
             border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0);
         }
+        header > section > nav > ul > li:nth-child(2):hover::after{
+            background-color: rgba(255, 255, 255, 0.08);
+            top: -12px;
+            left: 14px;
+            width: 158px;
+            height: 48px;
+            transition: all 0.01s;
+            cursor: pointer;
+        }
+
         header > section > nav > ul > li:nth-child(3)::after{
             content: " ";
             position: absolute;
@@ -83,7 +105,18 @@
             height: 40px;
             border: 3px solid #ffffff;
             border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0);
         }
+        header > section > nav > ul > li:nth-child(3):hover::after{
+            background-color: rgba(255, 255, 255, 0.08);
+            top: -12px;
+            left: 14px;
+            width: 158px;
+            height: 48px;
+            transition: all 0.01s;
+            cursor: pointer;
+        }
+
         header > section > nav > ul > li:nth-child(4)::after{
             content: " ";
             position: absolute;
@@ -94,7 +127,18 @@
             height: 40px;
             border: 3px solid #ffffff;
             border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0);
         }
+        header > section > nav > ul > li:nth-child(4):hover::after{
+            background-color: rgba(255, 255, 255, 0.08);
+            top: -12px;
+            left: 14px;
+            width: 158px;
+            height: 48px;
+            transition: all 0.01s;
+            cursor: pointer;
+        }
+
         header > section > nav > ul > li:nth-child(5)::after{
             content: " ";
             position: absolute;
@@ -105,6 +149,16 @@
             height: 40px;
             border: 3px solid #ffffff;
             border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        header > section > nav > ul > li:nth-child(5):hover::after{
+            background-color: rgba(255, 255, 255, 0.08);
+            top: -12px;
+            left: 14px;
+            width: 158px;
+            height: 48px;
+            transition: all 0.01s;
+            cursor: pointer;
         }
 
         /*main*/
@@ -147,15 +201,20 @@
         main > section > div{
             height: 45px;
             width: 170px;
-            border: 1px solid #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0);
             border-radius: 40px;
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
             top: 490px;
-            background-color: rgba(0, 0, 255, 0.2);
         }
+        main > section > div:hover{
+            border: 1px solid #ffffff;
+            transition: all 0.01s;
+            cursor: pointer;
+        }
+
         main > section > div > p{
             text-align: center;
             margin-top: 7px;
@@ -183,8 +242,15 @@
             width: 60px;
         }
         main > footer > address > i{
-            font-size: 60px;
+            font-size: 50px;
             color: white;
+            transition: all 0.1s;
+        }
+        main > footer > address > i:hover{
+            font-size: 60px;
+            color: #7e43ec;
+            transition: all 0.1s;
+            cursor: pointer;
         }
 
         /*     About Page     */
@@ -357,135 +423,289 @@
         /*color*/
 
         body > section:nth-child(5) > section:nth-child(1) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 30%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(1):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(1) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(1):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(2) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 30%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(2):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(2) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(2):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(4) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 70%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(4):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(4) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(4):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(5) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 70%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(5):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(5) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(5):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(6) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 20%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(6):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(6) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(6):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(7) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 70%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(7):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(7) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(7):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(9) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 35%;
+            margin-top: 150px;
+            margin-bottom: 100px;
+        }
+        body > section:nth-child(5) > section:nth-child(9):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(9) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+        }
+        body > section:nth-child(5) > section:nth-child(9):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(10) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 35%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(10):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(10) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(10):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(12) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 5%;
+            margin-bottom: 100px;
+            margin-top: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(12):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(12) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(12):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(14) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 50%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(14):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(14) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(14):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         body > section:nth-child(5) > section:nth-child(15) {
-            height: 180px;
+            height: 80px;
             border: 6px solid #978a8a;
             margin-left: 50%;
+            margin-bottom: 100px;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(15):hover {
+            height: 180px;
+            margin-bottom: 0;
+            transition: all 1s;
+            cursor: pointer;
         }
         body > section:nth-child(5) > section:nth-child(15) > p {
             font-size: 20px;
             text-align: center;
-            margin-top: 25px;
+            margin-top: -50px;
             color: white;
+            transition: all 1s;
+        }
+        body > section:nth-child(5) > section:nth-child(15):hover > p {
+            margin-top: 25px;
+            transition: all 1s;
+            cursor: pointer;
         }
 
         /*color*/
@@ -792,7 +1012,15 @@
         body > section:nth-child(13) > footer > address > i {
             font-size: 50px;
             color: #6161ac;
+            transition: all 0.1s;
         }
+        body > section:nth-child(13) > footer > address > i:hover {
+            font-size: 60px;
+            color: #ffffff;
+            transition: all 0.1s;
+            cursor: pointer;
+        }
+
         body > section:nth-child(13) > section {
             width: 500px;
             height: 350px;
