@@ -7,7 +7,7 @@ https://wireframe.cc/pro/pp/9e5dd9f4a493148<br>
 Figma = 
 https://www.figma.com/file/QQDWs9g03Y80RNn8SJzLgd/Website?node-id=5%3A2<br>
 Page = 
-http://localhost:63342/myprofile/index.html?_ijt=r1u467g2go7oa5paslnrvg8svu<br>
+https://jeewaa.github.io/MyProfile/<br>
 Webhost = 
 https://jeewawebsite.000webhostapp.com/<br>
 
