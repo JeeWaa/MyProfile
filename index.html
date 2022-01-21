@@ -877,14 +877,60 @@
         /*programming*/
 
         body > section:nth-child(9) {
-            height: 550px;
             border: 8px solid #ffffff;
             border-radius: 110px;
             margin: 40px;
             position: relative;
+            height: 550px;
+        }
+
+        /*start project*/
+
+        body > section:nth-child(9) > section:nth-child(2) {
+            display: none;
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section {
+            height: 200px;
+            margin: 50px;
             display: flex;
         }
-        body > section:nth-child(9) > div {
+        body > section:nth-child(9) > section:nth-child(2) > section > div {
+            width: 200px;
+            margin-right: 5%;
+            background-image: url("assets/icon/html.png");
+            background-size: cover;
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section > div > button {
+            width: 200px;
+            height: 100%;
+            background-color: rgba(126, 67, 236, 0.1);
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section > div > button > p {
+            margin-top: 80%;
+            color: white;
+        }
+
+        body > section:nth-child(9) > section:nth-child(2) > section:nth-child(2) > div:nth-child(3) {
+            display: none;
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section:nth-child(2) > div:nth-child(4) {
+            display: none;
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section:nth-child(2) > div:nth-child(5) {
+            display: none;
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section:nth-child(3) > div:nth-child(5) {
+            display: none;
+        }
+
+        /*end project*/
+
+        body > section:nth-child(9) > section:nth-child(1) {
+            height: 550px;
+            position: relative;
+            display: flex;
+        }
+        body > section:nth-child(9) > section:nth-child(1) > div {
             height: 550px;
             width: 700px;
             border-radius: 110px;
@@ -892,26 +938,26 @@
             left: -10px;
             top: -8px;
         }
-        body > section:nth-child(9) > div > img {
+        body > section:nth-child(9) > section:nth-child(1) > div > img {
             height: 568px;
             width: 708px;
             border-radius: 110px;
 
             box-shadow: 10px 10px 20px 8px #131313;
         }
-        body > section:nth-child(9) > aside {
+        body > section:nth-child(9) > section:nth-child(1) > aside {
             margin-left: 80px;
             margin-top: 20px;
         }
-        body > section:nth-child(9) > aside > dt {
+        body > section:nth-child(9) > section:nth-child(1) > aside > dt {
             font-size: 32px;
             color: #6e617d;
         }
-        body > section:nth-child(9) > aside > p {
+        body > section:nth-child(9) > section:nth-child(1) > aside > p {
             font-size: 24px;
             color: #ffffff;
         }
-        body > section:nth-child(9) > aside > section {
+        body > section:nth-child(9) > section:nth-child(1) > aside > section {
             width: 150px;
             height: 40px;
             border-radius: 20px;
@@ -920,11 +966,26 @@
             right: 80px;
             bottom: 20px;
             background-color: #6e617d;
+            color: white;
+            cursor: pointer;
         }
-        body > section:nth-child(9) > aside > section > p {
+        body > section:nth-child(9) > section:nth-child(1) > aside > section > p {
             margin-top: 10px;
             text-align: center;
             color: white;
+        }
+
+        /*transition*/
+
+        body > section:nth-child(9):hover > section:nth-child(2) {
+            display: block;
+        }
+        body > section:nth-child(9):hover {
+            height: 1400px;
+            transition: all 0.1s;
+        }
+        body > section:nth-child(9) > section:nth-child(2) > section > div > button {
+            cursor: pointer;
         }
 
         /*uiux*/
@@ -1833,13 +1894,31 @@
             body > section:nth-child(9) {
                 height: 400px;
             }
-            body > section:nth-child(9) > div {
+            body > section:nth-child(9) > section:nth-child(1) div {
                 height: 400px;
                 width: 500px;
             }
-            body > section:nth-child(9) > div > img {
+            body > section:nth-child(9) > section:nth-child(1) div > img {
                 height: 418px;
                 width: 508px;
+            }
+            body > section:nth-child(9) > section:nth-child(1) > aside > section {
+                bottom: 165px;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section {
+                height: 130px;
+                margin: 20px;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section > div {
+                width: 130px;
+                margin-right: 5%;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section > div > button {
+                width: 130px;
+                height: 100%;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section > div > button > p {
+                margin-top: 50%;
             }
 
             body > section:nth-child(10) {
@@ -1967,13 +2046,31 @@
             body > section:nth-child(9) {
                 height: 500px;
             }
-            body > section:nth-child(9) > div {
+            body > section:nth-child(9) > section:nth-child(1) > div {
                 height: 500px;
                 width: 600px;
             }
-            body > section:nth-child(9) > div > img {
+            body > section:nth-child(9) > section:nth-child(1) div > img {
                 height: 518px;
                 width: 608px;
+            }
+            body > section:nth-child(9) > section:nth-child(1) > aside > section {
+                bottom: 70px;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section {
+                height: 170px;
+                margin: 20px;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section > div {
+                width: 170px;
+                margin-right: 5%;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section > div > button {
+                width: 170px;
+                height: 100%;
+            }
+            body > section:nth-child(9) > section:nth-child(2) > section > div > button > p {
+                margin-top: 70%;
             }
 
             body > section:nth-child(10) {
@@ -2224,6 +2321,12 @@
             <p>See more</p>
         </section>
     </aside>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
 </section>
 <section>
     <div>
@@ -2238,16 +2341,59 @@
     </aside>
 </section>
 <section>
-    <div>
-        <img src="assets/image/programming.png" alt="programming image">
-    </div>
-    <aside>
-        <dt>Programming Projects</dt>
-        <p>I have done programming projects.<br> Software like java, SQL, HTML and CSS has been<br> use for this.</p>
+    <section>
+        <div>
+            <img src="assets/image/programming.png" alt="programming image">
+        </div>
+        <aside>
+            <dt>Programming Projects</dt>
+            <p>I have done programming projects.<br> Software like java, SQL, HTML and CSS has been<br> use for this.</p>
+            <section>
+                <p>See more</p>
+            </section>
+        </aside>
+    </section>
+    <section>
         <section>
-            <p>See more</p>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Layouts/assignment_01'"><p>Layouts<br>Assignment_01</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Layouts/assignment_02'"><p>Layouts<br>Assignment_02</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Layouts/assignment_03'"><p>Layouts<br>Assignment_03</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Layouts/assignment_04'"><p>Layouts<br>Assignment_04</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Layouts/assignment_05'"><p>Layouts<br>Assignment_05</p></button>
+            </div>
         </section>
-    </aside>
+        <section>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Transitions/assignment_01'"><p>Transitions<br>Assignment_01</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Transitions/assignment_02'"><p>Transitions<br>Assignment_02</p></button>
+            </div>
+        </section>
+        <section>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Animations/assignment_01'"><p>Animations<br>Assignment_01</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Animations/assignment_02'"><p>Animations<br>Assignment_02</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Animations/assignment_03'"><p>Animations<br>Assignment_03</p></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='myprojects/css/Animations/assignment_04'"><p>Animations<br>Assignment_04</p></button>
+            </div>
+        </section>
+    </section>
 </section>
 <section>
     <div>
