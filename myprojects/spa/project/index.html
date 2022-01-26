@@ -8,55 +8,67 @@
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        body > main {
+            margin: 20px;
+        }
         body > section > section {
             margin: 20px;
         }
         section > nav > div {
             background-color: rgba(87, 87, 87, 0.15);
         }
-        body > section:nth-child(3) > section:nth-child(2) {
+        body > section:nth-child(5) > section:nth-child(1) {
             display: flex;
         }
-        body > section:nth-child(3) > section:nth-child(2) > section {
+        body > section:nth-child(5) > section:nth-child(1) > section {
             margin: 10px;
             width: 100%;
+        }
+
+        body > section {
+            display: block;
         }
     </style>
 
 </head>
-<body>
+<body id="body">
+
+<!--    nav    -->
+<main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="homeId" class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="customerId" class="nav-link active" aria-current="page" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="itemId" class="nav-link active" aria-current="page" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="orderId" class="nav-link active" aria-current="page" href="#">Order</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</main>
+
+<!--    main    -->
+<section></section>
 
 <!--    customer    -->
-<section>
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="item.html">Item</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="order.html">Order</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </section>
+<section id="customer">
     <section>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInputName" placeholder="name">
@@ -120,36 +132,7 @@
 </section>
 
 <!--    item    -->
-<section>
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="item.html">Item</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="order.html">Order</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </section>
+<section id="item">
     <section>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInputItem" placeholder="item">
@@ -221,36 +204,7 @@
 </section>
 
 <!--    order    -->
-<section>
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="item.html">Item</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="order.html">Order</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </section>
+<section id="order">
     <section>
         <section>
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -260,19 +214,19 @@
                 <option value="3">C-003</option>
             </select>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInputName" placeholder="name">
+                <input type="text" class="form-control" id="floatingInputOName" placeholder="name">
                 <label for="floatingInputName">Customer Name</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputAddress" placeholder="address">
+                <input type="text" class="form-control" id="floatingInputOAddress" placeholder="address">
                 <label for="floatingInputAddress">Customer Address</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInputNumber" placeholder="number">
+                <input type="text" class="form-control" id="floatingInputONumber" placeholder="number">
                 <label for="floatingInputNumber">Number</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputEmail" placeholder="email">
+                <input type="text" class="form-control" id="floatingInputOEmail" placeholder="email">
                 <label for="floatingInputEmail">Email address</label>
             </div>
         </section>
@@ -284,23 +238,23 @@
                 <option value="3">I-003</option>
             </select>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInputItem" placeholder="item">
+                <input type="text" class="form-control" id="floatingInputOItem" placeholder="item">
                 <label for="floatingInputItem">Item Name</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputCompany" placeholder="company">
+                <input type="text" class="form-control" id="floatingInputOCompany" placeholder="company">
                 <label for="floatingInputCompany">Company</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInputDescription" placeholder="description">
+                <input type="text" class="form-control" id="floatingInputODescription" placeholder="description">
                 <label for="floatingInputDescription">Description</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputPrice" placeholder="price">
+                <input type="text" class="form-control" id="floatingInputOPrice" placeholder="price">
                 <label for="floatingInputPrice">Price</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputQty" placeholder="qty">
+                <input type="text" class="form-control" id="floatingInputOQty" placeholder="qty">
                 <label for="floatingInputQty">Qty</label>
             </div>
         </section>
@@ -336,6 +290,25 @@
         </table>
     </section>
 </section>
+
+<!--    js    -->
+<script>
+    document.getElementById("customerId").addEventListener("click", function () {
+        document.getElementById("customer").style.display = "block";
+        document.getElementById("item").style.display = "none";
+        document.getElementById("order").style.display = "none";
+    });
+    document.getElementById("itemId").addEventListener("click", function () {
+        document.getElementById("customer").style.display = "none";
+        document.getElementById("item").style.display = "block";
+        document.getElementById("order").style.display = "none";
+    });
+    document.getElementById("orderId").addEventListener("click", function () {
+        document.getElementById("customer").style.display = "none";
+        document.getElementById("item").style.display = "none";
+        document.getElementById("order").style.display = "block";
+    });
+</script>
 
 </body>
 </html>
