@@ -3,8 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Shop</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body > section:nth-child(1) > section {
+            margin: 20px;
+        }
+        section > nav > div {
+            background-color: rgba(87, 87, 87, 0.15);
+        }
+    </style>
+
 </head>
 <body>
+
+<!--    customer    -->
+<section>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="customer.html">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="item.html">Item</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="order.html">Order</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInputName" placeholder="name">
+            <label for="floatingInputName">Customer Name</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputAddress" placeholder="address">
+            <label for="floatingInputAddress">Customer Address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInputNumber" placeholder="number">
+            <label for="floatingInputNumber">Number</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputEmail" placeholder="email">
+            <label for="floatingInputEmail">Email address</label>
+        </div>
+    </section>
+    <section>
+        <button type="button" class="btn btn-primary btn-lg">Save</button>
+        <button type="button" class="btn btn-success btn-lg">Update</button>
+        <button type="button" class="btn btn-secondary btn-lg">Delete</button>
+    </section>
+    <section>
+        <table class="table caption-top">
+            <caption>Customer List</caption>
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Number</th>
+                <th scope="col">E-mail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">C-001</th>
+                <td>Amal</td>
+                <td>Panadura</td>
+                <td>0768452227</td>
+                <td>amal@gmail.com</td>
+            </tr>
+            <tr>
+                <th scope="row">C-002</th>
+                <td>Kamal</td>
+                <td>Colombo</td>
+                <td>0768457962</td>
+                <td>kamal@gmail.com</td>
+            </tr>
+            <tr>
+                <th scope="row">C-003</th>
+                <td>Nimal</td>
+                <td>Colombo</td>
+                <td>0772224895</td>
+                <td>nimal@gmail.com</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
 
 </body>
 </html>
