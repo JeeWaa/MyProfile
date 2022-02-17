@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+
+    <style>
+        body > section:nth-child(1) {
+            height: 80px;
+            width: 1600px;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            border: 2px solid red;
+            display: flex;
+        }
+        body > section > div {
+            border: 2px solid rgba(255, 0, 0, 0.75);
+            width: 100%;
+        }
+        body > section:nth-child(2) {
+            height: 40px;
+            width: 300px;
+            margin: auto;
+            top: 500px;
+            left: 0;
+            right: 0;
+            position: absolute;
+            border: 2px solid red;
+            display: flex;
+        }
+        body > section:nth-child(2) > button:nth-child(1){
+            width: 100%;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+        body > section:nth-child(2) > button:nth-child(2){
+            width: 100%;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+<section id="box">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <div id="box7"></div>
+    <div id="box8"></div>
+</section>
+
+<section>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</section>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    function animation01() {
+        $("#box1").css("background", "rgb(255,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation02() {
+        $("#box1").css("background", "rgba(255,0,0,0.8)");
+        $("#box2").css("background", "rgb(255,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation03() {
+        $("#box1").css("background", "rgba(255,0,0,0.64)");
+        $("#box2").css("background", "rgba(255,0,0,0.8)");
+        $("#box3").css("background", "rgb(255,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation04() {
+        $("#box1").css("background", "rgba(255,0,0,0.34)");
+        $("#box2").css("background", "rgba(255,0,0,0.64)");
+        $("#box3").css("background", "rgba(255,0,0,0.8)");
+        $("#box4").css("background", "rgb(255,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation05() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0.34)");
+        $("#box3").css("background", "rgba(255,0,0,0.64)");
+        $("#box4").css("background", "rgba(255,0,0,0.8)");
+        $("#box5").css("background", "rgb(255,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation06() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0.34)");
+        $("#box4").css("background", "rgba(255,0,0,0.64)");
+        $("#box5").css("background", "rgba(255,0,0,0.8)");
+        $("#box6").css("background", "rgb(255,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation07() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0.34)");
+        $("#box5").css("background", "rgba(255,0,0,0.64)");
+        $("#box6").css("background", "rgba(255,0,0,0.8)");
+        $("#box7").css("background", "rgb(255,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation08() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0.34)");
+        $("#box6").css("background", "rgba(255,0,0,0.64)");
+        $("#box7").css("background", "rgba(255,0,0,0.8)");
+        $("#box8").css("background", "rgb(255,0,0)");
+    }
+    function animation09() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0.34)");
+        $("#box7").css("background", "rgba(255,0,0,0.64)");
+        $("#box8").css("background", "rgba(255,0,0,0.8)");
+    }
+    function animation10() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0.34)");
+        $("#box8").css("background", "rgba(255,0,0,0.64)");
+    }
+    function animation11() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgb(255,0,0)");
+    }
+    function animation12() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgb(255,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0.34)");
+    }
+    function animation13() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgb(255,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0.8)");
+        $("#box8").css("background", "rgba(255,0,0,0.64)");
+    }
+    function animation14() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgb(255,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0.8)");
+        $("#box7").css("background", "rgba(255,0,0,0.64)");
+        $("#box8").css("background", "rgba(255,0,0,0.34)");
+    }
+    function animation15() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgb(255,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0.8)");
+        $("#box6").css("background", "rgba(255,0,0,0.64)");
+        $("#box7").css("background", "rgba(255,0,0,0.34)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation16() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0)");
+        $("#box3").css("background", "rgb(255,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0.8)");
+        $("#box5").css("background", "rgba(255,0,0,0.64)");
+        $("#box6").css("background", "rgba(255,0,0,0.34)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation17() {
+        $("#box1").css("background", "rgba(255,0,0,0)");
+        $("#box2").css("background", "rgb(255,0,0)");
+        $("#box3").css("background", "rgba(255,0,0,0.8)");
+        $("#box4").css("background", "rgba(255,0,0,0.64)");
+        $("#box5").css("background", "rgba(255,0,0,0.34)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation18() {
+        $("#box1").css("background", "rgb(255,0,0)");
+        $("#box2").css("background", "rgba(255,0,0,0.8)");
+        $("#box3").css("background", "rgba(255,0,0,0.64)");
+        $("#box4").css("background", "rgba(255,0,0,0.34)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation19() {
+        $("#box1").css("background", "rgba(255,0,0,0.8)");
+        $("#box2").css("background", "rgba(255,0,0,0.64)");
+        $("#box3").css("background", "rgba(255,0,0,0.34)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+    function animation20() {
+        $("#box1").css("background", "rgba(255,0,0,0.64)");
+        $("#box2").css("background", "rgba(255,0,0,0.34)");
+        $("#box3").css("background", "rgba(255,0,0,0)");
+        $("#box4").css("background", "rgba(255,0,0,0)");
+        $("#box5").css("background", "rgba(255,0,0,0)");
+        $("#box6").css("background", "rgba(255,0,0,0)");
+        $("#box7").css("background", "rgba(255,0,0,0)");
+        $("#box8").css("background", "rgba(255,0,0,0)");
+    }
+
+    function animation() {
+        setTimeout(animation01,50);
+        setTimeout(animation02,100);
+        setTimeout(animation03,150);
+        setTimeout(animation04,250);
+        setTimeout(animation05,300);
+        setTimeout(animation06,350);
+        setTimeout(animation07,400);
+        setTimeout(animation08,450);
+        setTimeout(animation09,500);
+        setTimeout(animation10,550);
+        setTimeout(animation11,600);
+        setTimeout(animation12,650);
+        setTimeout(animation13,700);
+        setTimeout(animation14,750);
+        setTimeout(animation15,800);
+        setTimeout(animation16,850);
+        setTimeout(animation17,900);
+        setTimeout(animation18,950);
+        setTimeout(animation19,1000);
+        setTimeout(animation20,1050);
+    }
+
+    let time;
+
+    $("#start").click(function () {
+        clearInterval(time);
+        time = setInterval(animation,1050);
+    });
+
+    $("#stop").click(function () {
+        clearInterval(time);
+    });
+
+</script>
+
+</body>
+</html>
