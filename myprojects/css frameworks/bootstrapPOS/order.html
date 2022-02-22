@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body > main {
+            margin: 20px;
+        }
+        body > section > section {
+            margin: 20px;
+        }
+        section > nav > div {
+            background-color: rgba(87, 87, 87, 0.15);
+        }
+        section > div {
+            width: 500px;
+        }
+
+        /*body > section:nth-child(5) > section:nth-child(1) {*/
+        /*    display: flex;*/
+        /*}*/
+        /*body > section:nth-child(5) > section:nth-child(1) > section {*/
+        /*    margin: 10px;*/
+        /*    width: 100%;*/
+        /*}*/
+
+        body > section:nth-child(2) > section {
+            display: flex;
+        }
+        body > section:nth-child(2) > section > section {
+            margin-right: 20px;
+            width: 100%;
+        }
+        button {
+            margin-right: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--    nav    -->
+<main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="homeId" class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="customerId" class="nav-link active" aria-current="page" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="itemId" class="nav-link active" aria-current="page" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="orderId" class="nav-link active" aria-current="page" href="#">Order</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</main>
+
+<!--    order    -->
+<section id="order">
+    <section>
+        <section>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">C-001</option>
+                <option value="2">C-002</option>
+                <option value="3">C-003</option>
+            </select>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOName" placeholder="name">
+                <label for="floatingInputOName">Customer Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOAddress" placeholder="address">
+                <label for="floatingInputOAddress">Customer Address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputONumber" placeholder="number">
+                <label for="floatingInputONumber">Number</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOEmail" placeholder="email">
+                <label for="floatingInputOEmail">Email address</label>
+            </div>
+        </section>
+        <section>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">I-001</option>
+                <option value="2">I-002</option>
+                <option value="3">I-003</option>
+            </select>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOItem" placeholder="item">
+                <label for="floatingInputOItem">Item Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOCompany" placeholder="company">
+                <label for="floatingInputOCompany">Company</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputODescription" placeholder="description">
+                <label for="floatingInputODescription">Description</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOPrice" placeholder="price">
+                <label for="floatingInputOPrice">Price</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputOQty" placeholder="qty">
+                <label for="floatingInputOQty">Enter Qty</label>
+            </div>
+        </section>
+    </section>
+    <section>
+        <button type="button" class="btn btn-primary btn-lg">Add</button>
+        <button type="button" class="btn btn-success btn-lg">clear</button>
+        <button type="button" class="btn btn-secondary btn-lg">Place</button>
+    </section>
+    <section>
+        <table class="table caption-top">
+            <caption>Order List</caption>
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Code</th>
+                <th scope="col">Item</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Qty</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">C-001</th>
+                <td>I-001</td>
+                <td>Apple</td>
+                <td>description</td>
+                <td>100.00</td>
+                <td>10</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+
+</body>
+</html>
