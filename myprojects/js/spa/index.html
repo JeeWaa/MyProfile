@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="assets/resource/normalize.css">
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+    <link href="assets/css/fontawesome/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -56,11 +57,14 @@
             font-size: 20px;
         }
 
-        /*customer & item page*/
+        /*main*/
 
         body > main {
             margin-left: 280px;
         }
+
+        /*customer & item page*/
+
         body > main > section:nth-child(1) {
             height: 140px;
             display: flex;
@@ -122,7 +126,9 @@
             background-color: white;
         }
 
-        /*order page*/
+        /*        order page        */
+
+        /*details bar*/
 
         body > main:nth-child(5) > section:nth-child(1) {
             height: 180px;
@@ -134,8 +140,44 @@
             height: 90px;
             width: 300px;
             background-color: #ffffff;
+            position: relative;
 
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
+        }
+        /*item, customer and order*/
+        body > main:nth-child(5) > section:nth-child(1) > section > i {
+            font-size: 20px;
+            color: #0d6efd;
+            margin-top: 20px;
+            margin-left: 8%;
+            margin-right: 10px;
+        }
+        body > main:nth-child(5) > section:nth-child(1) > section > p:nth-child(2) {
+            font-size: 12px;
+            margin-left: 60px;
+            margin-top: -32px;
+        }
+        body > main:nth-child(5) > section:nth-child(1) > section > p:nth-child(3) {
+            font-size: 40px;
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            margin-top: -30px;
+            right: 20px;
+        }
+        /*balance*/
+        body > main:nth-child(5) > section:nth-child(1) > section:nth-child(4) > p:nth-child(2) {
+            font-size: 12px;
+            margin-left: 60px;
+            margin-top: -32px;
+        }
+        body > main:nth-child(5) > section:nth-child(1) > section:nth-child(4) > p:nth-child(3) {
+            font-size: 50px;
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            margin-top: 2px;
+            right: 10px;
         }
         body > main:nth-child(5) > section:nth-child(1) > section:nth-child(4) {
             border-radius: 30px;
@@ -144,7 +186,32 @@
             width: 320px;
         }
 
+        /*order id, time and date*/
+
         body > main:nth-child(5) > section:nth-child(2) {
+            border-radius: 30px;
+            margin-left: 20px;
+            margin-top: -54px;
+            margin-bottom: 35px;
+            height: 32px;
+            width: 760px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-around;
+        }
+        body > main:nth-child(5) > section:nth-child(2) > div {
+            align-items: center;
+            margin: 0;
+            width: 200px;
+        }
+        body > main:nth-child(5) > section:nth-child(2) > div > p {
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        /*input details*/
+
+        body > main:nth-child(5) > section:nth-child(3) {
             margin-top: 10px;
             border-radius: 0;
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.03);
@@ -153,15 +220,14 @@
             margin-right: 20px;
             display: flex;
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(1) {
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(1) {
             border-radius: 20px;
             width: 400px;
-            margin-left: 20px;
             background-color: #ffffff;
 
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(2) {
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(2) {
             border-radius: 30px;
             width: 400px;
             margin-left: 10px;
@@ -169,47 +235,65 @@
 
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(3) {
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(3) {
             border-radius: 30px;
-            height: 100px;
-            width: 300px;
+            height: 190px;
+            width: 240px;
             background-color: #ffffff;
             margin-left: 10px;
 
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
         }
 
-        body > main:nth-child(5) > section:nth-child(2) > section > select {
+        body > main:nth-child(5) > section:nth-child(3) > section > select {
             border-radius: 20px;
             margin-left: 20px;
             margin-bottom: 20px;
             margin-top: 20px;
             width: 250px;
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(1) > div > div > input {
+        body > main:nth-child(5) > section:nth-child(3) > section > div > input {
             border-radius: 20px;
             margin-left: 20px;
             margin-right: 20px;
+            margin-bottom: 10px;
+            width: 350px;
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(2) > div > div > input {
-            border-radius: 20px;
-            margin-left: 20px;
-            margin-right: 20px;
+        body > main:nth-child(5) > section:nth-child(3) > section > div:nth-child(6) > input {
+            margin-bottom: 20px;
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(3) > div {
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(3) > div:nth-child(1) {
             border-radius: 20px;
-            margin-left: 20px;
+            margin-left: 5px;
             margin-top: 20px;
             display: flex;
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(3) > div > input {
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(3) > div:nth-child(1) > input {
             border-radius: 20px;
-            width: 150px;
+            width: 100px;
         }
-        body > main:nth-child(5) > section:nth-child(2) > section:nth-child(3) > div > button {
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(3) > div:nth-child(1) > button {
             border-radius: 20px;
-            margin-left: 10px;
-            width: 80px;
+            width: 65px;
+            height: 30px;
+        }
+        body > main:nth-child(5) > section:nth-child(3) > section:nth-child(3) > div:nth-child(2) > button {
+            border-radius: 20px;
+            width: 194px;
+            position: relative;
+            margin: auto;
+            left: 22px;
+            top: 80px;
+        }
+
+        /*table*/
+
+        body > main:nth-child(5) > section:nth-child(4) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        body > main:nth-child(5) > section:nth-child(4) > table > tbody {
+            background-color: white;
         }
     </style>
 
@@ -222,7 +306,8 @@
     <main>
         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
             <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <i class="fab fa-buysellads"></i>
+                <!--<i class="fab fa-buysellads"></i>-->
+                <i class="fa-solid fa-leaf"></i>
                 <span class="fs-4">Shop</span>
             </a>
             <hr>
@@ -392,83 +477,95 @@
 
 <main id="orderPage">
     <section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section>
+            <i class="fas fa-clipboard-list"></i>
+            <p>Items</p>
+            <p>180</p>
+            <!--<i class="fa-solid fa-apple-whole"></i>
+            <i class="fas fa-home"></i>
+            <i class="fa-solid fa-address-book"></i>
+            <i class="fa-solid fa-leaf"></i>
+            <i class="fa-solid fa-user-plus"></i>
+            <i class="fa-solid fa-user-large"></i>-->
+        </section>
+        <section>
+            <!--<i class="fa-solid fa-circle-user"></i>-->
+            <i class="fa-solid fa-user-large"></i>
+            <p>Customers</p>
+            <p>6056</p>
+        </section>
+        <section>
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <p>Orders</p>
+            <p>8504</p>
+        </section>
+        <section>
+            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            <p>Total Balance</p>
+            <p>85462.00</p>
+        </section>
+    </section>
+
+    <section>
+        <div><p>Order ID :</p></div>
+        <div><p>Time :</p></div>
+        <div><p>Date :</p></div>
     </section>
 
     <section>
         <section>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="customerId" placeholder="Customer Id">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Customer Id" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="customerName" placeholder="Customer Name">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Customer Name" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="customerAddress" placeholder="Customer Address">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Customer Address" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="customerNumber" placeholder="Customer Number">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Customer Number" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="customerEmail" placeholder="Customer Email">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Customer Email" aria-label=".form-control-sm example">
             </div>
         </section>
         <section>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="itemCode" placeholder="Item Code">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Code" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="itemName" placeholder="Item Name">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Name" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="itemCompany" placeholder="Item Company">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Company" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="itemPrice" placeholder="Item Price">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Price" aria-label=".form-control-sm example">
             </div>
-            <div class="row mb-3">
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="itemQty" placeholder="Item Qty">
-                </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Qty" aria-label=".form-control-sm example">
             </div>
         </section>
         <section>
             <div>
-                <input class="form-control" type="text" placeholder="Enter Qty" aria-label="default input example">
+                <input class="form-control form-control-sm" type="text" placeholder="Enter Qty" aria-label=".form-control-sm example">
                 <button type="button" class="btn btn-primary btn-sm">Add</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-sm">Place</button>
             </div>
         </section>
     </section>
