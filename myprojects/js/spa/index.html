@@ -113,10 +113,10 @@
             right: 20px;
         }
 
-        body > main:nth-child(3) > section:nth-child(2) {
+        body > main > section:nth-child(2) {
             display: flex;
         }
-        body > main:nth-child(3) > section:nth-child(2) > section:nth-child(1) {
+        body > main > section:nth-child(2) > section:nth-child(1) {
             width: 600px;
             margin-left: 20px;
             margin-bottom: 20px;
@@ -127,7 +127,7 @@
             border-bottom: 20px solid rgba(255, 0, 0, 0.01);
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
         }
-        body > main:nth-child(3) > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) {
+        body > main > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) {
             width: 420px;
             height: 100px;
             margin-left: 20px;
@@ -136,9 +136,8 @@
             background-color: white;
 
             border-top: 20px solid rgba(255, 0, 0, 0.01);
-            box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
         }
-        body > main:nth-child(3) > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) {
+        body > main > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) {
             width: 420px;
             height: 165px;
             margin-left: 20px;
@@ -149,17 +148,6 @@
             border-top: 20px solid rgba(255, 0, 0, 0.01);
             box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
         }
-
-        /*body > main:nth-child(4) > section:nth-child(2) {
-            width: 600px;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            background-color: white;
-
-            border-top: 30px solid red;
-            box-shadow: -5px 5px 10px 1px rgba(172, 124, 217, 0.24);
-        }*/
 
         body > main > section:nth-child(2) > section:nth-child(1) > div {
             margin-right: 20px;
@@ -503,33 +491,56 @@
 
 <main id="itemPage">
     <section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section>
+            <i class="fa-solid fa-clipboard-check"></i>
+            <p>Add</p>
+            <p>2500</p>
+        </section>
+        <section>
+            <i class="fa-regular fa-clipboard"></i>
+            <p>Remove</p>
+            <p>120</p>
+        </section>
+        <section>
+            <i class="fa-solid fa-clipboard"></i>
+            <p>Items</p>
+            <p>2380</p>
+        </section>
     </section>
 
     <section>
-        <div>
-            <input class="form-control" type="text" placeholder="Item code" aria-label="default input example">
-        </div>
-        <div>
-            <input class="form-control" type="text" placeholder="Item Name" aria-label="default input example">
-        </div>
-        <div>
-            <input class="form-control" type="text" placeholder="Item Company" aria-label="default input example">
-        </div>
-        <div>
-            <input class="form-control" type="text" placeholder="Item Price" aria-label="default input example">
-        </div>
-        <div>
-            <input class="form-control" type="email" placeholder="Item Qty" aria-label="default input example">
-        </div>
+        <section>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Code" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Name" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Company" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Price" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input class="form-control form-control-sm" type="text" placeholder="Item Qty" aria-label=".form-control-sm example">
+            </div>
+        </section>
 
-        <div>
-            <button type="button" class="btn btn-primary btn-sm">Save</button>
-            <button type="button" class="btn btn-secondary btn-sm">Update</button>
-            <button type="button" class="btn btn-danger btn-sm">Delete</button>
-        </div>
+        <section>
+            <section>
+                <div>
+                    <input class="form-control form-control-sm" type="text" placeholder="Search Item Code" aria-label=".form-control-sm example">
+                </div>
+            </section>
+            <section>
+                <div>
+                    <button type="button" class="btn btn-primary btn-sm">Save</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                </div>
+            </section>
+        </section>
     </section>
 
     <section>
