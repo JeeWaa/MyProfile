@@ -134,9 +134,11 @@
             margin-bottom: 20px;
             border-radius: 20px;
             background-color: white;
+            display: flex;
 
             border-top: 20px solid rgba(255, 0, 0, 0.01);
         }
+
         body > main > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) {
             width: 420px;
             height: 165px;
@@ -164,7 +166,12 @@
             margin-left: 20px;
             margin-right: 20px;
             margin-bottom: 16px;
-            width: 380px;
+            width: 280px;
+        }
+        body > main > section:nth-child(2) > section:nth-child(2) > section:nth-child(1) > div > button {
+            border-radius: 20px;
+            width: 75px;
+            margin-left: 4px;
         }
         body > main > section:nth-child(2) > section:nth-child(2) > section:nth-child(2) > div > button {
             border-radius: 20px;
@@ -424,40 +431,43 @@
     <section>
         <section>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Id" aria-label=".form-control-sm example">
+                <input id="txtCustomerId" class="form-control form-control-sm" type="text" placeholder="Customer Id" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Name" aria-label=".form-control-sm example">
+                <input id="txtCustomerName" class="form-control form-control-sm" type="text" placeholder="Customer Name" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Address" aria-label=".form-control-sm example">
+                <input id="txtCustomerAddress" class="form-control form-control-sm" type="text" placeholder="Customer Address" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Number" aria-label=".form-control-sm example">
+                <input id="txtCustomerNumber" class="form-control form-control-sm" type="text" placeholder="Customer Number" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Email" aria-label=".form-control-sm example">
+                <input id="txtCustomerEmail" class="form-control form-control-sm" type="text" placeholder="Customer Email" aria-label=".form-control-sm example">
             </div>
         </section>
 
         <section>
             <section>
                 <div>
-                    <input class="form-control form-control-sm" type="text" placeholder="Search Customer Id" aria-label=".form-control-sm example">
+                    <input id="searchCustomerId" class="form-control form-control-sm" type="text" placeholder="Search Customer Id" aria-label=".form-control-sm example">
+                </div>
+                <div>
+                    <button id="customerSearchButton" type="button" class="btn btn-primary btn-sm">Search</button>
                 </div>
             </section>
             <section>
                 <div>
-                    <button type="button" class="btn btn-primary btn-sm">Save</button>
-                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
-                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    <button id="saveCustomerButton" type="button" class="btn btn-primary btn-sm">Save</button>
+                    <button id="updateCustomerButton" type="button" class="btn btn-secondary btn-sm">Update</button>
+                    <button id="deleteCustomerButton" type="button" class="btn btn-danger btn-sm">Delete</button>
                 </div>
             </section>
         </section>
     </section>
 
     <section>
-        <table class="table">
+        <table id="customerTable" class="table">
             <thead class="table-dark">
             <tr>
                 <th scope="col">Id</th>
@@ -467,21 +477,8 @@
                 <th scope="col">Email</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">C-001</th>
-                <td>Amal</td>
-                <td>Panadura</td>
-                <td>0752266849</td>
-                <td>amal@gmail.com</td>
-            </tr>
-            <tr>
-                <th scope="row">C-002</th>
-                <td>Kamal</td>
-                <td>Kalutara</td>
-                <td>0766688111</td>
-                <td>kamal@gmail.com</td>
-            </tr>
+            <tbody id="customerTableBody">
+
             </tbody>
         </table>
     </section>
@@ -695,33 +692,43 @@
     </section>
 </main>
 
-<!--javaScript-->
+<!--    jQuery    -->
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
+<!--    database    -->
+
+<script src="assets/database/database.js"></script>
 
 <script>
-    document.getElementById("home").addEventListener("click", function () {
-        document.getElementById("homePage").style.display = "block";
-        document.getElementById("customerPage").style.display = "none";
-        document.getElementById("itemPage").style.display = "none";
-        document.getElementById("orderPage").style.display = "none";
+
+    /*    sidebar    */
+
+    $("#home").click(function () {
+        $("#homePage").css("display","block");
+        $("#customerPage").css("display","none");
+        $("#itemPage").css("display","none");
+        $("#orderPage").css("display","none")
     });
-    document.getElementById("customer").addEventListener("click", function () {
-        document.getElementById("homePage").style.display = "none";
-        document.getElementById("customerPage").style.display = "block";
-        document.getElementById("itemPage").style.display = "none";
-        document.getElementById("orderPage").style.display = "none";
+    $("#customer").click(function () {
+        $("#homePage").css("display","none");
+        $("#customerPage").css("display","block");
+        $("#itemPage").css("display","none");
+        $("#orderPage").css("display","none")
     });
-    document.getElementById("item").addEventListener("click", function () {
-        document.getElementById("homePage").style.display = "none";
-        document.getElementById("customerPage").style.display = "none";
-        document.getElementById("itemPage").style.display = "block";
-        document.getElementById("orderPage").style.display = "none";
+    $("#item").click(function () {
+        $("#homePage").css("display","none");
+        $("#customerPage").css("display","none");
+        $("#itemPage").css("display","block");
+        $("#orderPage").css("display","none")
     });
-    document.getElementById("order").addEventListener("click", function () {
-        document.getElementById("homePage").style.display = "none";
-        document.getElementById("customerPage").style.display = "none";
-        document.getElementById("itemPage").style.display = "none";
-        document.getElementById("orderPage").style.display = "block";
+    $("#order").click(function () {
+        $("#homePage").css("display","none");
+        $("#customerPage").css("display","none");
+        $("#itemPage").css("display","none");
+        $("#orderPage").css("display","block")
     });
+
 </script>
 
 </body>
