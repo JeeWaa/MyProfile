@@ -731,6 +731,50 @@
 
     /*    customer page    */
 
+    /*save*/
+
+    $("#saveCustomerButton").click(function () {
+
+        let id = $("#txtCustomerId").val();
+        let name = $("#txtCustomerName").val();
+        let address = $("#txtCustomerAddress").val();
+        let number = $("#txtCustomerNumber").val();
+        let email = $("#txtCustomerEmail").val();
+
+        var customerObject = {
+            customerId:id,
+            customerName:name,
+            customerAddress:address,
+            customerNumber:number,
+            customerEmail:email
+        };
+
+        customerData.push(customerObject);
+
+        loadAllCustomer();
+
+        $("#customerTableBody>tr").click(function () {
+
+            let customerId = $(this).children(":eq(0)").text();
+            let customerName = $(this).children(":eq(1)").text();
+            let customerAddress = $(this).children(":eq(2)").text();
+            let customerNumber = $(this).children(":eq(3)").text();
+            let customerEmail = $(this).children(":eq(4)").text();
+
+            $("#txtCustomerId").val(customerId);
+            $("#txtCustomerName").val(customerName);
+            $("#txtCustomerAddress").val(customerAddress);
+            $("#txtCustomerNumber").val(customerNumber);
+            $("#txtCustomerEmail").val(customerEmail);
+
+            $("#customerTableBody>tr").on('dblclick',function () {
+                $(this).remove();
+            })
+        });
+
+        clear();
+    });
+
     /*function*/
 
     function loadAllCustomer() {
@@ -764,7 +808,7 @@
         $("#txtCustomerNumber").val("");
         $("#txtCustomerEmail").val("");
     }
-    
+
 </script>
 
 </body>
