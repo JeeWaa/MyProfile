@@ -809,6 +809,20 @@
         }
     });
 
+    /*delete*/
+
+    $("#deleteCustomerButton").click(function () {
+
+        var selectId = $("#txtCustomerId").val();
+        let i = selectCustomerIndex(selectId);
+
+        customerData.splice(i,1);
+
+        loadAllCustomer();
+        clear();
+
+    });
+
     /*function*/
 
     function loadAllCustomer() {
