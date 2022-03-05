@@ -508,40 +508,43 @@
     <section>
         <section>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Code" aria-label=".form-control-sm example">
+                <input id="txtItemCode" class="form-control form-control-sm" type="text" placeholder="Item Code" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Name" aria-label=".form-control-sm example">
+                <input id="txtItemName" class="form-control form-control-sm" type="text" placeholder="Item Name" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Company" aria-label=".form-control-sm example">
+                <input id="txtItemCompany" class="form-control form-control-sm" type="text" placeholder="Item Company" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Price" aria-label=".form-control-sm example">
+                <input id="txtItemPrice" class="form-control form-control-sm" type="text" placeholder="Item Price" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Qty" aria-label=".form-control-sm example">
+                <input id="txtItemQty" class="form-control form-control-sm" type="text" placeholder="Item Qty" aria-label=".form-control-sm example">
             </div>
         </section>
 
         <section>
             <section>
                 <div>
-                    <input class="form-control form-control-sm" type="text" placeholder="Search Item Code" aria-label=".form-control-sm example">
+                    <input id="searchItemCode" class="form-control form-control-sm" type="text" placeholder="Search Item Code" aria-label=".form-control-sm example">
+                </div>
+                <div>
+                    <button id="itemSearchButton" type="button" class="btn btn-primary btn-sm">Search</button>
                 </div>
             </section>
             <section>
                 <div>
-                    <button type="button" class="btn btn-primary btn-sm">Save</button>
-                    <button type="button" class="btn btn-secondary btn-sm">Update</button>
-                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    <button id="saveItemButton" type="button" class="btn btn-primary btn-sm">Save</button>
+                    <button id="updateItemButton" type="button" class="btn btn-secondary btn-sm">Update</button>
+                    <button id="deleteItemButton" type="button" class="btn btn-danger btn-sm">Delete</button>
                 </div>
             </section>
         </section>
     </section>
 
     <section>
-        <table class="table">
+        <table id="itemTable" class="table">
             <thead class="table-dark">
             <tr>
                 <th scope="col">Code</th>
@@ -551,21 +554,8 @@
                 <th scope="col">Qty</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">I-001</th>
-                <td>Apple</td>
-                <td>ABB</td>
-                <td>150.00</td>
-                <td>600</td>
-            </tr>
-            <tr>
-                <th scope="row">I-002</th>
-                <td>Mango</td>
-                <td>STT</td>
-                <td>100.00</td>
-                <td>800</td>
-            </tr>
+            <tbody id="itemTableBody">
+
             </tbody>
         </table>
     </section>
@@ -772,7 +762,7 @@
             })
         });
 
-        clear();
+        clearCustomer();
     });
 
     /*update*/
@@ -803,9 +793,9 @@
             customerData.push(customerObject);
 
             loadAllCustomer();
-            clear();
+            clearCustomer();
         }else {
-            clear();
+            clearCustomer();
         }
     });
 
@@ -819,7 +809,7 @@
         customerData.splice(i,1);
 
         loadAllCustomer();
-        clear();
+        clearCustomer();
 
     });
 
@@ -837,7 +827,7 @@
             $("#txtCustomerNumber").val(response.customerNumber);
             $("#txtCustomerEmail").val(response.customerEmail);
         }else {
-            clear();
+            clearCustomer();
         }
 
     });
@@ -868,12 +858,48 @@
         }
     }
 
-    function clear() {
+    function clearCustomer() {
         $("#txtCustomerId").val("");
         $("#txtCustomerName").val("");
         $("#txtCustomerAddress").val("");
         $("#txtCustomerNumber").val("");
         $("#txtCustomerEmail").val("");
+    }
+
+    /*    item page    */
+
+    /*function*/
+
+    function loadAllItem() {
+        $("#itemTableBody").empty();
+        for (var i in itemData) {
+            let tableRow = `<tr><td>${itemData[i].itemCode}</td><td>${itemData[i].itemName}</td><td>${itemData[i].itemCompany}</td><td>${itemData[i].itemPrice}</td><td>${itemData[i].itemQty}</td></tr>`;
+            $("#itemTableBody").append(tableRow);
+        }
+    }
+
+    function searchItem(code) {
+        for (let i=0 ; i<itemData.length ; i++) {
+            if (itemData[i].itemCode == code) {
+                return itemData[i];
+            }
+        }
+    }
+
+    function selectItemIndex(code) {
+        for (let i=0 ; i<itemData.length ; i++) {
+            if (itemData[i].itemCode == code) {
+                return i;
+            }
+        }
+    }
+
+    function clearItem() {
+        $("#txtItemCode").val("");
+        $("#txtItemName").val("");
+        $("#txtItemCompany").val("");
+        $("#txtItemPrice").val("");
+        $("#txtItemQty").val("");
     }
 
 </script>
