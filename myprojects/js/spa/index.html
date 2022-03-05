@@ -960,6 +960,25 @@
 
     });
 
+    /*search*/
+
+    $("#itemSearchButton").click(function () {
+
+        var searchCode = $("#searchItemCode").val();
+        var response = searchItem(searchCode);
+
+        if (response) {
+            $("#txtItemCode").val(response.itemCode);
+            $("#txtItemName").val(response.itemName);
+            $("#txtItemCompany").val(response.itemCompany);
+            $("#txtItemPrice").val(response.itemPrice);
+            $("#txtItemQty").val(response.itemQty);
+        }else {
+            clearItem();
+        }
+
+    });
+
     /*function*/
 
     function loadAllItem() {
