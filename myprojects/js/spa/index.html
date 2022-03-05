@@ -775,6 +775,40 @@
         clear();
     });
 
+    /*update*/
+
+    $("#updateCustomerButton").click(function () {
+
+        var selectId = $("#txtCustomerId").val();
+        var response = searchCustomer(selectId);
+
+        if (response) {
+            let id = $("#txtCustomerId").val();
+            let name = $("#txtCustomerName").val();
+            let address = $("#txtCustomerAddress").val();
+            let number = $("#txtCustomerNumber").val();
+            let email = $("#txtCustomerEmail").val();
+
+            var customerObject = {
+                customerId:id,
+                customerName:name,
+                customerAddress:address,
+                customerNumber:number,
+                customerEmail:email
+            };
+
+            let i = selectCustomerIndex(selectId);
+            customerData.splice(i,1);
+
+            customerData.push(customerObject);
+
+            loadAllCustomer();
+            clear();
+        }else {
+            clear();
+        }
+    });
+
     /*function*/
 
     function loadAllCustomer() {
