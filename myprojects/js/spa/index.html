@@ -868,6 +868,50 @@
 
     /*    item page    */
 
+    /*save*/
+
+    $("#saveItemButton").click(function () {
+
+        let code = $("#txtItemCode").val();
+        let name = $("#txtItemName").val();
+        let company = $("#txtItemCompany").val();
+        let price = $("#txtItemPrice").val();
+        let qty = $("#txtItemQty").val();
+
+        var itemObject = {
+            itemCode:code,
+            itemName:name,
+            itemCompany:company,
+            itemPrice:price,
+            itemQty:qty
+        };
+
+        itemData.push(itemObject);
+
+        loadAllItem();
+
+        $("#itemTableBody>tr").click(function () {
+
+            let itemCode = $(this).children(":eq(0)").text();
+            let itemName = $(this).children(":eq(1)").text();
+            let itemCompany = $(this).children(":eq(2)").text();
+            let itemPrice = $(this).children(":eq(3)").text();
+            let itemQty = $(this).children(":eq(4)").text();
+
+            $("#txtItemCode").val(itemCode);
+            $("#txtItemName").val(itemName);
+            $("#txtItemCompany").val(itemCompany);
+            $("#txtItemPrice").val(itemPrice);
+            $("#txtItemQty").val(itemQty);
+
+            $("#itemTableBody>tr").on('dblclick',function () {
+                $(this).remove();
+            })
+        });
+
+        clearItem();
+    });
+
     /*function*/
 
     function loadAllItem() {
