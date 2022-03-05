@@ -823,6 +823,25 @@
 
     });
 
+    /*search*/
+
+    $("#customerSearchButton").click(function () {
+
+        var searchId = $("#searchCustomerId").val();
+        var response = searchCustomer(searchId);
+
+        if (response) {
+            $("#txtCustomerId").val(response.customerId);
+            $("#txtCustomerName").val(response.customerName);
+            $("#txtCustomerAddress").val(response.customerAddress);
+            $("#txtCustomerNumber").val(response.customerNumber);
+            $("#txtCustomerEmail").val(response.customerEmail);
+        }else {
+            clear();
+        }
+
+    });
+
     /*function*/
 
     function loadAllCustomer() {
