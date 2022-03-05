@@ -912,6 +912,40 @@
         clearItem();
     });
 
+    /*update*/
+
+    $("#updateItemButton").click(function () {
+
+        var selectCode = $("#txtItemCode").val();
+        var response = searchItem(selectCode);
+
+        if (response) {
+            let code = $("#txtItemCode").val();
+            let name = $("#txtItemName").val();
+            let company = $("#txtItemCompany").val();
+            let price = $("#txtItemPrice").val();
+            let qty = $("#txtItemQty").val();
+
+            var itemObject = {
+                itemCode:code,
+                itemName:name,
+                itemCompany:company,
+                itemPrice:price,
+                itemQty:qty
+            };
+
+            let i = selectItemIndex(selectCode);
+            itemData.splice(i,1);
+
+            itemData.push(itemObject);
+
+            loadAllItem();
+            clearItem();
+        }else {
+            clearItem();
+        }
+    });
+
     /*function*/
 
     function loadAllItem() {
