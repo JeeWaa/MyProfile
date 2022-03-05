@@ -729,6 +729,42 @@
         $("#orderPage").css("display","block")
     });
 
+    /*    customer page    */
+
+    /*function*/
+
+    function loadAllCustomer() {
+        $("#customerTableBody").empty();
+        for (var i in customerData) {
+            let tableRow = `<tr><td>${customerData[i].customerId}</td><td>${customerData[i].customerName}</td><td>${customerData[i].customerAddress}</td><td>${customerData[i].customerNumber}</td><td>${customerData[i].customerEmail}</td></tr>`;
+            $("#customerTableBody").append(tableRow);
+        }
+    }
+
+    function searchCustomer(id) {
+        for (let i=0 ; i<customerData.length ; i++) {
+            if (customerData[i].customerId == id) {
+                return customerData[i];
+            }
+        }
+    }
+
+    function selectCustomerIndex(id) {
+        for (let i=0 ; i<customerData.length ; i++) {
+            if (customerData[i].customerId == id) {
+                return i;
+            }
+        }
+    }
+
+    function clear() {
+        $("#txtCustomerId").val("");
+        $("#txtCustomerName").val("");
+        $("#txtCustomerAddress").val("");
+        $("#txtCustomerNumber").val("");
+        $("#txtCustomerEmail").val("");
+    }
+    
 </script>
 
 </body>
