@@ -946,6 +946,20 @@
         }
     });
 
+    /*delete*/
+
+    $("#deleteItemButton").click(function () {
+
+        var selectCode = $("#txtItemCode").val();
+        let i = selectItemIndex(selectCode);
+
+        itemData.splice(i,1);
+
+        loadAllItem();
+        clearItem();
+
+    });
+
     /*function*/
 
     function loadAllItem() {
