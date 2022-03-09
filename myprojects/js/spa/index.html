@@ -595,64 +595,64 @@
 
     <section>
         <section>
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <select id="customerComboBox" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Customer Id</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <div>
+                <input id="customerId" class="form-control form-control-sm" type="text" placeholder="Customer Id" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input id="customerName" class="form-control form-control-sm" type="text" placeholder="Customer Name" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input id="customerAddress" class="form-control form-control-sm" type="text" placeholder="Customer Address" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input id="customerNumber" class="form-control form-control-sm" type="text" placeholder="Customer Number" aria-label=".form-control-sm example">
+            </div>
+            <div>
+                <input id="customerEmail" class="form-control form-control-sm" type="text" placeholder="Customer Email" aria-label=".form-control-sm example">
+            </div>
+        </section>
+        <section>
+            <select id="itemComboBox" class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Id" aria-label=".form-control-sm example">
+                <input id="itemCode" class="form-control form-control-sm" type="text" placeholder="Item Code" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Name" aria-label=".form-control-sm example">
+                <input id="itemName" class="form-control form-control-sm" type="text" placeholder="Item Name" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Address" aria-label=".form-control-sm example">
+                <input id="itemCompany" class="form-control form-control-sm" type="text" placeholder="Item Company" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Number" aria-label=".form-control-sm example">
+                <input id="itemPrice" class="form-control form-control-sm" type="text" placeholder="Item Price" aria-label=".form-control-sm example">
             </div>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Customer Email" aria-label=".form-control-sm example">
-            </div>
-        </section>
-        <section>
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Code" aria-label=".form-control-sm example">
-            </div>
-            <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Name" aria-label=".form-control-sm example">
-            </div>
-            <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Company" aria-label=".form-control-sm example">
-            </div>
-            <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Price" aria-label=".form-control-sm example">
-            </div>
-            <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Item Qty" aria-label=".form-control-sm example">
+                <input id="itemQty" class="form-control form-control-sm" type="text" placeholder="Item Qty" aria-label=".form-control-sm example">
             </div>
         </section>
         <section>
             <div>
-                <input class="form-control form-control-sm" type="text" placeholder="Enter Qty" aria-label=".form-control-sm example">
-                <button type="button" class="btn btn-primary btn-sm">Add</button>
+                <input id="enterQty" class="form-control form-control-sm" type="text" placeholder="Enter Qty" aria-label=".form-control-sm example">
+                <button id="enterQtyButton" type="button" class="btn btn-primary btn-sm">Add</button>
             </div>
             <div>
-                <button type="button" class="btn btn-primary btn-sm">Place</button>
+                <button id="placeOrderButton" type="button" class="btn btn-primary btn-sm">Place</button>
             </div>
         </section>
     </section>
 
     <section>
-        <table class="table">
+        <table id="orderTable" class="table">
             <thead class="table-dark">
             <tr>
                 <th scope="col">Id</th>
@@ -662,21 +662,8 @@
                 <th scope="col">Price</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">O-001</th>
-                <td>I-001</td>
-                <td>Apple</td>
-                <td>10</td>
-                <td>150.00</td>
-            </tr>
-            <tr>
-                <th scope="row">O-001</th>
-                <td>I-002</td>
-                <td>Mango</td>
-                <td>8</td>
-                <td>100.00</td>
-            </tr>
+            <tbody id="orderTableBody">
+
             </tbody>
         </table>
     </section>
@@ -741,7 +728,7 @@
 
         customerData.push(customerObject);
 
-        loadAllCustomer();
+        loadAllCustomer()
 
         $("#customerTableBody>tr").click(function () {
 
@@ -1011,6 +998,43 @@
         $("#txtItemCompany").val("");
         $("#txtItemPrice").val("");
         $("#txtItemQty").val("");
+    }
+
+    /*    order page    */
+
+    /*function*/
+
+    function customerLoadComboBox() {
+        $("#customerComboBox").empty();
+        for (var i in customerData) {
+            let comboBox = '<option id="i">'+customerData[i].customerId+'</option>';
+            $("#customerComboBox").append(comboBox);
+        }
+    }
+
+    function itemLoadComboBox() {
+        $("#itemComboBox").empty();
+        for (var i in itemData) {
+            let comboBox = '<option id="i">'+itemData[i].itemCode+'</option>';
+            $("#itemComboBox").append(comboBox);
+        }
+    }
+    
+    function f() {
+        
+    }
+
+    function clear() {
+        $("#customerId").val("");
+        $("#customerName").val("");
+        $("#customerAddress").val("");
+        $("#customerNumber").val("");
+        $("#customerEmail").val("");
+        $("#itemCode").val("");
+        $("#itemName").val("");
+        $("#itemCompany").val("");
+        $("#itemPrice").val("");
+        $("#itemQty").val("");
     }
 
 </script>
