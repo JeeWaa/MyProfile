@@ -1041,6 +1041,28 @@
 
     });
 
+    /*add*/
+
+    $("#addButton").click(function () {
+
+        let code = $("#itemCode").val();
+        let name = $("#itemName").val();
+        let company = $("#itemCompany").val();
+        let price = $("#itemPrice").val();
+        let qty = $("#enterQty").val();
+        let total = price * qty;
+
+        clearEnterQty();
+
+        let tableRow = `<tr><td>${code}</td><td>${name}</td><td>${company}</td><td>${price}</td><td>${qty}</td><td>${total}</td></tr>`;
+        $("#orderTableBody").append(tableRow);
+
+        $("#orderTableBody>tr").on('dblclick',function () {
+            $(this).remove();
+        })
+
+    });
+
     /*function*/
 
     function customerLoadComboBox() {
@@ -1086,6 +1108,10 @@
         $("#itemCompany").val("");
         $("#itemPrice").val("");
         $("#itemQty").val("");
+        $("#enterQty").val("");
+    }
+
+    function clearEnterQty() {
         $("#enterQty").val("");
     }
 
