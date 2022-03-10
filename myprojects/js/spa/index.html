@@ -1022,6 +1022,25 @@
 
     });
 
+    /*load item*/
+
+    $("#itemComboBox").click(function () {
+
+        var comboBox = $(this).val();
+        var response = comboBoxCode(comboBox);
+
+        if (response) {
+            $("#itemCode").val(response.itemCode);
+            $("#itemName").val(response.itemName);
+            $("#itemCompany").val(response.itemCompany);
+            $("#itemPrice").val(response.itemPrice);
+            $("#itemQty").val(response.itemQty);
+        }else {
+
+        }
+
+    });
+
     /*function*/
 
     function customerLoadComboBox() {
@@ -1044,6 +1063,14 @@
         for (let i=0 ; i<customerData.length ; i++) {
             if (customerData[i].customerId == id) {
                 return customerData[i];
+            }
+        }
+    }
+
+    function comboBoxCode(code) {
+        for (let i=0 ; i<itemData.length ; i++) {
+            if (itemData[i].itemCode == code) {
+                return itemData[i];
             }
         }
     }
