@@ -418,17 +418,17 @@
         <section>
             <i class="fa-solid fa-user-plus"></i>
             <p>Add</p>
-            <p>1500</p>
+            <p id="addCustomerCount">0</p>
         </section>
         <section>
             <i class="fa-solid fa-user-minus"></i>
             <p>Remove</p>
-            <p>200</p>
+            <p id="removeCustomerCount">0</p>
         </section>
         <section>
             <i class="fa-solid fa-users"></i>
             <p>Customers</p>
-            <p>1300</p>
+            <p id="customerCount">0</p>
         </section>
     </section>
 
@@ -495,17 +495,17 @@
         <section>
             <i class="fa-solid fa-clipboard-check"></i>
             <p>Add</p>
-            <p>2500</p>
+            <p id="addItemCount">0</p>
         </section>
         <section>
             <i class="fa-regular fa-clipboard"></i>
             <p>Remove</p>
-            <p>120</p>
+            <p id="removeItemCount">0</p>
         </section>
         <section>
             <i class="fa-solid fa-clipboard"></i>
             <p>Items</p>
-            <p>2380</p>
+            <p id="itemCount">0</p>
         </section>
     </section>
 
@@ -572,22 +572,22 @@
         <section>
             <i class="fas fa-clipboard-list"></i>
             <p>Items</p>
-            <p>180</p>
+            <p id="allItemCount">0</p>
         </section>
         <section>
             <i class="fa-solid fa-user-large"></i>
             <p>Customers</p>
-            <p>6056</p>
+            <p id="allCustomerCount">0</p>
         </section>
         <section>
             <i class="fa-solid fa-cart-arrow-down"></i>
             <p>Orders</p>
-            <p>8504</p>
+            <p id="orderCount">0</p>
         </section>
         <section>
             <i class="fa-solid fa-circle-dollar-to-slot"></i>
             <p>Total Balance</p>
-            <p>85462.00</p>
+            <p id="total">0.00</p>
         </section>
     </section>
 
@@ -748,13 +748,12 @@
             $("#txtCustomerNumber").val(customerNumber);
             $("#txtCustomerEmail").val(customerEmail);
 
-            $("#customerTableBody>tr").on('dblclick',function () {
-                $(this).remove();
-            })
         });
 
         customerId();
         customerLoadComboBox();
+        addCustomerCount();
+        allCustomerCount();
         clearCustomer();
     });
 
@@ -804,6 +803,8 @@
 
         loadAllCustomer();
         customerLoadComboBox();
+        removeCustomerCount();
+        allCustomerCount();
         clearCustomer();
 
     });
@@ -814,6 +815,8 @@
 
         var searchId = $("#searchCustomerId").val();
         var response = searchCustomer(searchId);
+
+        clearSearchCustomer();
 
         if (response) {
             $("#txtCustomerId").val(response.customerId);
@@ -865,6 +868,32 @@
                 return i;
             }
         }
+    }
+
+    let addCustomer = 0;
+    function addCustomerCount() {
+        addCustomer++;
+        $("#addCustomerCount").text(addCustomer);
+    }
+
+    let removeCustomer = 0;
+    function removeCustomerCount() {
+        removeCustomer++;
+        $("#removeCustomerCount").text(removeCustomer);
+    }
+
+    function allCustomerCount() {
+        $("#customerCount").empty();
+        let customerCount = 0;
+        for (var i in customerData) {
+            customerCount++;
+            $("#customerCount").text(customerCount);
+            $("#allCustomerCount").text(customerCount);
+        }
+    }
+
+    function clearSearchCustomer() {
+        $("#searchCustomerId").val("");
     }
 
     function clearCustomer() {
@@ -921,6 +950,8 @@
 
         itemLoadComboBox();
         itemCode();
+        addItemCount();
+        allItemCount();
         clearItem();
     });
 
@@ -970,6 +1001,8 @@
 
         loadAllItem();
         itemLoadComboBox();
+        removeItemCount();
+        allItemCount();
         clearItem();
 
     });
@@ -980,6 +1013,8 @@
 
         var searchCode = $("#searchItemCode").val();
         var response = searchItem(searchCode);
+
+        clearSearchItem();
 
         if (response) {
             $("#txtItemCode").val(response.itemCode);
@@ -1031,6 +1066,32 @@
                 return i;
             }
         }
+    }
+
+    let addItem = 0;
+    function addItemCount() {
+        addItem++;
+        $("#addItemCount").text(addItem);
+    }
+
+    let removeItem = 0;
+    function removeItemCount() {
+        removeItem++;
+        $("#removeItemCount").text(removeItem);
+    }
+
+    function allItemCount() {
+        $("#itemCount").empty();
+        let itemCount = 0;
+        for (var i in itemData) {
+            itemCount++;
+            $("#itemCount").text(itemCount);
+            $("#allItemCount").text(itemCount);
+        }
+    }
+
+    function clearSearchItem() {
+        $("#searchItemCode").val("");
     }
 
     function clearItem() {
@@ -1093,6 +1154,10 @@
         let qty = $("#enterQty").val();
         let total = price * qty;
 
+        let balance = total;
+
+        $("#total").text(balance);
+
         clearEnterQty();
 
         let tableRow = `<tr><td>${code}</td><td>${name}</td><td>${company}</td><td>${price}</td><td>${qty}</td><td>${total}</td></tr>`;
@@ -1113,6 +1178,7 @@
         $("#orderTableBody>tr").remove();
 
         orderId();
+        orderCount();
 
     });
 
@@ -1162,6 +1228,12 @@
                 return itemData[i];
             }
         }
+    }
+
+    let order = 0;
+    function orderCount() {
+        order++;
+        $("#orderCount").text(order);
     }
 
     function clear() {
