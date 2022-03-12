@@ -63,7 +63,50 @@
             margin-left: 280px;
         }
 
-        /*customer & item page*/
+        /*        home page        */
+
+        body > main:nth-child(2) > section:nth-child(1) {
+            height: 350px;
+            border: 2px solid red;
+            margin: 10px;
+        }
+        body > main:nth-child(2) > section:nth-child(1) > img {
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        body > main:nth-child(2) > p {
+            font-size: 32px;
+            color: blue;
+            margin-left: 10px;
+        }
+
+        body > main:nth-child(2) > section:nth-child(3) {
+            margin: 10px;
+            display: flex;
+            position: absolute;
+        }
+        body > main:nth-child(2) > section:nth-child(3) > div {
+            height: 190px;
+            width: 266px;
+            border: 2px solid red;
+            position: relative;
+        }
+        body > main:nth-child(2) > section:nth-child(3) > div > img {
+            background-size: cover;
+            height: 190px;
+            width: 266px;
+        }
+
+        body > main:nth-child(2) > section:nth-child(3) > div > img:hover {
+            height: 200px;
+            width: 270px;
+            transition: all 0.1s;
+            cursor: pointer;
+        }
+
+        /*        customer & item page        */
 
         body > main > section:nth-child(1) {
             height: 140px;
@@ -409,7 +452,28 @@
 
 <!--    home page    -->
 
-<main id="homePage"></main>
+<main id="homePage">
+    <section>
+        <img src="assets/image/page.jpg">
+    </section>
+
+    <p>Products</p>
+
+    <section>
+        <div>
+            <img src="assets/image/01.jpg">
+        </div>
+        <div>
+            <img src="assets/image/02.jpg">
+        </div>
+        <div>
+            <img src="assets/image/01.jpg">
+        </div>
+        <div>
+            <img src="assets/image/02.jpg">
+        </div>
+    </section>
+</main>
 
 <!--    customer page    -->
 
