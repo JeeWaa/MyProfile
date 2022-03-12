@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>que</title>
+
+    <link rel="stylesheet" href="assets/resource/normalize.css">
+
+    <style>
+        body {
+            background-color: #38343d;
+        }
+
+        body > section:nth-child(1) {
+             height: 80px;
+             width: 1000px;
+             left: 0;
+             right: 0;
+             top: 180px;
+             margin: auto;
+             position: absolute;
+        }
+        body > section:nth-child(1) >div {
+            height: 60px;
+            width: 120px;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+        }
+
+        body > section:nth-child(2) {
+            height: 80px;
+            width: 1000px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            display: flex;
+        }
+        body > section:nth-child(2) > div {
+            height: 60px;
+            width: 120px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: relative;
+        }
+        body > section:nth-child(2) > div:nth-child(1) {
+            margin-left: 180px;
+        }
+        body > section:nth-child(2) > div:nth-child(4) {
+            margin-right: 180px;
+        }
+
+        body > section:nth-child(3) {
+            height: 80px;
+            width: 1000px;
+            left: 0;
+            right: 0;
+            bottom: 180px;
+            margin: auto;
+            position: absolute;
+        }
+        body > section:nth-child(3) >div {
+            height: 60px;
+            width: 120px;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div id="box1"></div>
+</section>
+<section>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+</section>
+<section>
+    <div id="box6"></div>
+</section>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+    function animation01() {
+        $("#box1").css("background", "rgb(255,0,0)");
+        $("#box2").css("background", "rgb(48,103,44)");
+        $("#box3").css("background", "rgb(7,17,201)");
+        $("#box4").css("background", "rgb(241,229,0)");
+        $("#box5").css("background", "rgb(87,87,87)");
+        $("#box6").css("background", "rgb(156,88,220)");
+    }
+    function animation02() {
+        $("#box1").css("background", "rgb(156,88,220)");
+        $("#box2").css("background", "rgb(255,0,0)");
+        $("#box3").css("background", "rgb(48,103,44)");
+        $("#box4").css("background", "rgb(7,17,201)");
+        $("#box5").css("background", "rgb(241,229,0)");
+        $("#box6").css("background", "rgb(87,87,87)");
+    }
+    function animation03() {
+        $("#box1").css("background", "rgb(87,87,87)");
+        $("#box2").css("background", "rgb(156,88,220)");
+        $("#box3").css("background", "rgb(255,0,0)");
+        $("#box4").css("background", "rgb(48,103,44)");
+        $("#box5").css("background", "rgb(7,17,201)");
+        $("#box6").css("background", "rgb(241,229,0)");
+    }
+    function animation04() {
+        $("#box1").css("background", "rgb(241,229,0)");
+        $("#box2").css("background", "rgb(87,87,87)");
+        $("#box3").css("background", "rgb(156,88,220)");
+        $("#box4").css("background", "rgb(255,0,0)");
+        $("#box5").css("background", "rgb(48,103,44)");
+        $("#box6").css("background", "rgb(7,17,201)");
+    }
+    function animation05() {
+        $("#box1").css("background", "rgb(7,17,201)");
+        $("#box2").css("background", "rgb(241,229,0)");
+        $("#box3").css("background", "rgb(87,87,87)");
+        $("#box4").css("background", "rgb(156,88,220)");
+        $("#box5").css("background", "rgb(255,0,0)");
+        $("#box6").css("background", "rgb(48,103,44)");
+    }
+    function animation06() {
+        $("#box1").css("background", "rgb(48,103,44)");
+        $("#box2").css("background", "rgb(7,17,201)");
+        $("#box3").css("background", "rgb(241,229,0)");
+        $("#box4").css("background", "rgb(87,87,87)");
+        $("#box5").css("background", "rgb(156,88,220)");
+        $("#box6").css("background", "rgb(255,0,0)");
+    }
+
+    function animation() {
+        setTimeout(animation01,500);
+        setTimeout(animation02,1000);
+        setTimeout(animation03,1500);
+        setTimeout(animation04,2000);
+        setTimeout(animation05,2500);
+        setTimeout(animation06,3000);
+    }
+
+    setInterval(animation,3000);
+</script>
+
+</body>
+</html>
